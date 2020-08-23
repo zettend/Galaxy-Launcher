@@ -10,11 +10,11 @@
 <body style="background-color: black;">
 	<h1>Отсутствует интернет соединение!</h1>
 	<script>
-		var http = require('http');
+		var http = require('https');
 		
 		var seed = new Date().getTime();
-		// var site = "https://mcglrun.vercel.app/";
-		var site = "http://127.0.0.1:5500/";
+		var site = "https://galaxy-launcher.vercel.app/";
+		// var site = "http://127.0.0.1:5500/";
 		var rep = "mclient-j10";
 
 		http.get(site + "face.html", function(resp) {
