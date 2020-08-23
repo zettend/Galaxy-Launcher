@@ -17,7 +17,7 @@
 		// var site = "http://127.0.0.1:5500/";
 		var rep = "mclient-j10";
 
-		http.get(site + "face.html", function(resp) {
+		http.get(site + "face.html?v=" + seed, function(resp) {
 			resp.setEncoding('utf8');
 			let rawData = '';
 			resp.on('data', (chunk) => rawData += chunk);
@@ -28,7 +28,7 @@
 			var l = document.createElement('link');
 			l.type = 'text/css';
 			l.rel = 'stylesheet';
-			l.href = site + 'style.css';
+			l.href = site + 'style.css?v=' + seed;
 			var x = document.getElementsByTagName('script')[0];
 			x.parentNode.insertBefore(l, x);
 			l.onload = function() {
@@ -37,7 +37,7 @@
 				var s = document.createElement('script');
 				s.type = 'text/javascript';
 				s.async = true;
-				s.src = site + 'index.js';
+				s.src = site + 'index.js?v=' + seed;
 				x.parentNode.insertBefore(s, x);
 				s.onload = () => ready(rep);
 			};
