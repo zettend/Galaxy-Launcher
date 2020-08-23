@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+	<script type="text/javascript" src="htmltools.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color: black;">
+	<h1>Отсутствует интернет соединение!</h1>
+	<script>
+		var http = require('http');
+		
+		var seed = new Date().getTime();
+		// var site = "https://mcglrun.vercel.app/";
+		var site = "http://127.0.0.1:5500/";
+		var rep = "mclient-j10";
+
+		http.get(site + "face.html", function(resp) {
+			resp.setEncoding('utf8');
+			let rawData = '';
+			resp.on('data', (chunk) => rawData += chunk);
+			resp.on('end', () => paste(rawData));
+		});
+
+		function paste(data) {
+			var l = document.createElement('link');
+			l.type = 'text/css';
+			l.rel = 'stylesheet';
+			l.href = site + 'style.css';
+			var x = document.getElementsByTagName('script')[0];
+			x.parentNode.insertBefore(l, x);
+			l.onload = function() {
+				document.getElementById("content").innerHTML = data;
+			
+				var s = document.createElement('script');
+				s.type = 'text/javascript';
+				s.async = true;
+				s.src = site + 'index.js';
+				x.parentNode.insertBefore(s, x);
+				s.onload = () => ready(rep);
+			};
+		}
+	</script>
+</body>
+
+</html>
