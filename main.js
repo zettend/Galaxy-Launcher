@@ -5,8 +5,8 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 720,
+    width: 900,
+    height: 600,
     titleBarStyle: 'hiddenInset',
     title: "Galaxy Launcher",
     icon: __dirname + '/icon.png',

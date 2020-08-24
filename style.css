@@ -3,7 +3,7 @@ body {
     height: 100%;
     margin: 0;
     color: white;
-    font-family: arial;
+    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
 }
 
 a {
@@ -200,8 +200,9 @@ iframe {
 
 .loginpanel input,
 select {
-    border: 1px solid gray;
-    background-color: #1c3b4f;
+    background: rgba(0,0,0,0.10);
+    border: 1 solid #03A3D9;
+    border-radius: 10px;
     color: white;
     margin: 4px 0;
     padding: 3px 4px;
