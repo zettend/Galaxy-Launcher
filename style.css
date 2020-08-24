@@ -690,6 +690,10 @@ select {
     width: -webkit-fill-available;
 }
 
+.loginpanel input{
+    padding: 8px 8px;
+}
+
 .loginpanel input:focus {
     border-color: #03a4d9;
 }
