@@ -299,6 +299,7 @@ textarea {
     /* 3 */
     *vertical-align: middle;
     /* 3 */
+    border: none;
 }
 
 /**
@@ -470,6 +471,9 @@ textarea {
     padding: 0.2em 0;
 }
 
+/**
+ * Galaxy Launcher
+ */
 
 html,
 body {
@@ -495,7 +499,7 @@ a:hover {
     left: 0;
     right: 0;
     position: absolute;
-    background: #1c3b4f;
+    background: #16202A;
     padding: 5px;
     padding-bottom: 1px;
     display: flex;
@@ -530,9 +534,11 @@ a:hover {
 
 button {
     background: #03A3D9;
+    padding: 0 15px;
     border-radius: 10px;
     padding: 15px;
     color: white;
+    width: 100%;
 }
 
 button:hover {
@@ -554,7 +560,7 @@ button:hover {
 }
 
 .runbox {
-    margin: 15px 0;
+    margin: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -591,10 +597,12 @@ button:hover {
 }
 
 .body .right {
-    background-color: #2c5b6f;
+    background-color: #1c3b4f;
     display: flex;
     flex-direction: column;
     min-width: 200px;
+    border-radius: 10px;
+    margin: 4px;
 }
 
 .body .links {
@@ -647,10 +655,10 @@ button:hover {
 }
 
 .toolbox {
-    padding: 0 3px;
+    padding: 3px;
     font-size: 10px;
     display: flex;
-    margin-top: 3px;
+    margin: 3px;
 }
 
 .toolbox .toolcontent {
@@ -674,13 +682,16 @@ iframe {
 .loginpanel input,
 select {
     background: rgba(0, 0, 0, 0.10);
-    border: 1px solid #03A3D9;
+    border: 1px solid #03a4d975;
     border-radius: 10px;
     color: white;
     margin: 4px 5px;
-    padding: 8px 8px;
+    padding: 8px 4px;
+    width: -webkit-fill-available;
+}
 
-    max-width: 100%;
+.loginpanel input:focus {
+    border-color: #03a4d9;
 }
 
 .error {
