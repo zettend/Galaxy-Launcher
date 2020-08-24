@@ -8,6 +8,7 @@ function createWindow () {
     width: 1280,
     height: 720,
     titleBarStyle: 'hiddenInset',
+    title: "Galaxy Launcher",
     icon: __dirname + '/icon.png',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
