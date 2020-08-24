@@ -257,7 +257,7 @@ function runGame(rep, opt) {
     if(opt)
         args.push(opt);
     mc = proc.spawn(
-        $("java").value, args.concat(["-jar", "Minecraft.jar", $("login").value, $("pass").value]),
+        $("java").value, args.concat(["-jar", "-Djava.library.path=./bin/lib", "Minecraft.jar", $("login").value, $("pass").value]),
         {
             cwd: getRepDir() + rep,
             detached: true
