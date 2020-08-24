@@ -1,21 +1,20 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "galaxy-launcher",
+  "version": "0.0.1",
+  "description": "Galaxy Launcher",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "v",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "MCGL",
+    "Project Galaxy",
+    "Galaxy",
+    "minecraft",
+    "Minecraft Galaxy"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "zettend",
   "devDependencies": {
     "electron": "^9.1.2"
   }
